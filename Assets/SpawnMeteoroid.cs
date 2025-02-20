@@ -7,14 +7,15 @@ public class SpawnMeteoroid : MonoBehaviour
     [SerializeField] private GameObject meteoPrefab;
     private Vector3 spawnPoint;
     private int randonNumber;
+    Coroutine co;
 
     private void Start()
     {
-        StartCoroutine("SpawnMeteo");
+        co = StartCoroutine("SpawnMeteo");
     }
     public void StopSpawn()
     {
-        StopCoroutine("SpawnMeteo");
+        StopCoroutine(co);
     }
     private void SetPos()
     {

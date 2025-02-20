@@ -21,6 +21,9 @@ public class Meteoroid : MonoBehaviour
         moveDir = randomPos - transform.position;
         moveDir.Normalize();
 
+        //float angle = Mathf.Atan2(moveDir.y, moveDir.x) * Mathf.Rad2Deg - 90f;
+        //transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
+
         transform.up = moveDir;
     }
 
